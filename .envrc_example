@@ -1,3 +1,6 @@
-export ASPNETCORE_PORT=
-export ASPNETCORE_ALLOWED_ORIGINS=
+export PORT=
+
+# dotnet core path
 export PATH=
+
+export ALLOWED_ORIGINS=

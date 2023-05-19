@@ -36,26 +36,7 @@ public class Program
                     app.UseEndpoints(endpoints =>
                     {
                         endpoints.MapControllers();
-                        
-                        // endpoints.MapMethods("/api", new[] { "OPTIONS" }, context =>
-                        // {
-                        //     context.Response.Headers.Add("Allow", "OPTIONS,GET,POST,PUT,DELETE");
-                        //     context.Response.StatusCode = 200;
-                        //     return Task.CompletedTask;
-                        // });
                     });
-                    
-                    // app.Use((context, next) =>
-                    // {
-                    //     if (context.Request.Method == "OPTIONS")
-                    //     {
-                    //         context.Response.Headers.Add("Allow", "OPTIONS,GET,POST,PUT,DELETE");
-                    //         context.Response.StatusCode = 200;
-                    //         return Task.CompletedTask;
-                    //     }
-                    //
-                    //     return next();
-                    // });
                 });
                 // webBuilder.UseStartup<Startup>();
                 webBuilder.UseUrls("http://localhost:" + GetPortFromEnvironment());
@@ -63,8 +44,6 @@ public class Program
 
     private static string GetPortFromEnvironment()
     {
-        // Read the environment variable for the port, e.g., "ASPNETCORE_PORT"
-        string port = Environment.GetEnvironmentVariable("ASPNETCORE_PORT") ?? "5000";
-        return port;
+        return Environment.GetEnvironmentVariable("PORT") ?? "";
     }
 }
