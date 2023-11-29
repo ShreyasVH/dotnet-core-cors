@@ -3,4 +3,5 @@ export PORT=
 # dotnet core path
 export PATH=
 
-export ALLOWED_ORIGINS=
+# example "https://abc.com,https://def.com"
+export ASPNETCORE_ALLOWED_ORIGINS=
