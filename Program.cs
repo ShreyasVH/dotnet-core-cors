@@ -39,11 +39,16 @@ public class Program
                     });
                 });
                 // webBuilder.UseStartup<Startup>();
-                webBuilder.UseUrls("http://localhost:" + GetPortFromEnvironment());
+                webBuilder.UseUrls("http://" + GetHostFromEnvironment() + ":" + GetPortFromEnvironment());
             });
 
     private static string GetPortFromEnvironment()
     {
         return Environment.GetEnvironmentVariable("PORT") ?? "";
+    }
+
+    private static string GetHostFromEnvironment()
+    {
+        return Environment.GetEnvironmentVariable("HOST") ?? "";
     }
 }
