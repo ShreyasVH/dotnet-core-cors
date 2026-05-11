@@ -4,5 +4,4 @@ export HOST=
 # dotnet core path
 export PATH=
 
-# example "https://abc.com,https://def.com"
 export ASPNETCORE_ALLOWED_ORIGINS=
