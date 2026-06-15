@@ -1,7 +1,7 @@
 export PORT=
 export HOST=
 
-# dotnet core 10.0.203 path
+# dotnet core 10.0.300 path
 export PATH=
 
 export ASPNETCORE_ALLOWED_ORIGINS=
